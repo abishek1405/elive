@@ -1,0 +1,212 @@
+{% extends 'base.html' %} {% load static %} {% block content %}
+
+<style>
+  .hero-section1 {
+    position: relative;
+    height: 40vh;
+    overflow: hidden;
+    color: rgb(5, 5, 5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bg-video {
+    position: absolute;
+    top: -110;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-head {
+    font-weight: 600 !important;
+    font-size: 3vw !important;
+  }
+  .hero-para {
+    font-size: 2.8vw;
+  }
+  @media (max-width: 900px) {
+    .hero-para {
+      font-size: small;
+    }
+    .hero-head {
+      font-size: 20px;
+    }
+    .hero-section1 {
+      height: 40vh;
+    }
+  }
+</style>
+
+<header class="hero-section1 py-5">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="{% static 'img/hero2.mp4' %}" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="hero-content col-11 py-5">
+    <!-- <h1 class="season hero-head">
+      A family biz founded by a SAT/Admission EXPERT.
+    </h1> -->
+    <p class="hero-para season">
+      A boutique consultancy that offers hyper-personalized mentorship for 
+high-achieving students aiming for top 50 U.S. colleges. 
+    </p>
+  </div>
+</header>
+
+<style>
+  .profile-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .profile {
+    width: 100%;
+  }
+</style>
+
+<style>
+  .profile-part,
+  .profile-part90 {
+    display: inline-block;
+    position: relative;
+    padding-top: 8px; /* optional, to give space if needed */
+  }
+
+  .profile-part::after,
+  .profile-part90::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0; /* <-- Changed from bottom to top */
+    height: 4px;
+    background-color: orange;
+    width: 0;
+    transition: width 1.5s ease-out;
+    border-radius: 10px;
+  }
+
+  .profile-part.animate::after {
+    width: 100%;
+  }
+
+  .profile-part90.animate::after {
+    width: 90%;
+  }
+
+  .green {
+    color: #003c32;
+  }
+  .head {
+    font-size: 3vw;
+  }
+  .para {
+    font-size: 1.3vw;
+  }
+  .lii {
+    list-style-type: none;
+    padding: 0px;
+    margin-top: 17px;
+  }
+
+  .ull {
+    padding: 0;
+  }
+
+  .about-div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .content-cuter {
+    width: 95%;
+  }
+
+  @media (max-width: 768px) {
+    .head{
+      font-size: 20px;
+    }
+    .para{
+      font-size: 10px;
+    }
+  }
+</style>
+
+<div class="container-fluid bg-white py-5">
+  <div class="row">
+    <div class="col-4 text-center profile-container">
+      <ul class="ull col-12 col-md-7  animated-heading profile-part">
+        <li class="lii">
+          <img src="{% static 'img/passport.webp' %}" class="profile" alt="" />
+        </li>
+      </ul>
+    </div>
+    <div class="col-8 animated-heading about-div profile-part90">
+      <div class="content-cuter">
+        <h1 class="season orange head">Salabat Khan</h1>
+        <p class="para"><strong>U.S. College Admissions Strategist | Founder, Elite Ivy Admissions</strong></p>
+        <p class="para">
+A seasoned U.S. undergraduate admissions strategist with a reputation for transforming student potential into Ivy League success stories. With over a decade of experience in the highly competitive college admissions landscape, Salabat has mentored hundreds of students across the globe to secure spots at top-tier universities including Harvard, Stanford, MIT, Princeton, and Columbia.
+        </p>
+        <p class="para">
+  Known for his data-driven strategies and no-nonsense approach, Salabat specializes in crafting compelling personal narratives, optimizing extracurricular profiles, and demystifying complex application processes like Early Decision, SAT/ACT strategy, and Common App execution. His consulting model combines deep psychological insight with insider-level knowledge of what elite schools really look for.
+        </p>
+        <p class="para">
+        When he’s not decoding the admissions matrix, Salabat speaks at international college fairs, conducts mock interviews, and collaborates with high schools to build U.S.-focused college prep programs.
+        </p>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-white py-5">
+  <div class="row">
+    <div class="col-4 text-center profile-container">
+      <ul class="ull col-12 col-md-7 animated-heading profile-part">
+        <li class="lii">
+          <img src="{% static 'img/passport.webp' %}" class="profile" alt="" />
+        </li>
+      </ul>
+    </div>
+    <div class="col-8 animated-heading about-div profile-part90">
+      <div class="content-cuter">
+        <h1 class="season orange head">Syeda Urooj Khan</h1>
+        <p class="para"><strong>IELTS Trainer & Admissions Advisor | Elite Ivy Admissions</strong></p>
+        <p class="para">
+          With a calm, focused approach and a results-driven mindset, she has helped countless students achieve 7.5+ band scores—opening doors to top universities in the U.S., U.K., Canada, and beyond.
+
+        </p>
+        <p class="para">
+      Urooj brings more than just teaching expertise—she brings strategy. Her students consistently praise her for simplifying complex concepts, offering targeted feedback, and building the confidence needed to excel in every section: Listening, Reading, Writing, and Speaking.
+        </p>
+        <p class="para">
+          Beyond IELTS, Urooj plays an active role in the admissions process. She assists in editing standout personal statements, guiding students through mock interviews, and ensuring their communication is sharp, authentic, and aligned with top university expectations.
+        </p>
+        <p class="para">
+        Families and students alike trust Urooj not only for her knowledge, but for her dedication, warmth, and commitment to each student’s success. With her support, students don’t just pass a test—they step into global opportunities with confidence.
+
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
