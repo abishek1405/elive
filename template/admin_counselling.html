@@ -199,9 +199,9 @@
   }
   .admin-inner1{
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     height: 100%;
   }
   .admin-inner2{
@@ -215,16 +215,18 @@
   }
   .admin-inner3{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: flex-end;
     height: 100%;
   }
 
   .admin-counselling-para{
     font-size: 1.5vw;
   }
-
+.coma{
+  align-self: flex-end;
+}
 
 
   @media (max-width:768px) {
@@ -243,6 +245,10 @@
     .admin-counselling-para{
       font-size: 3vw;
     }
+    .admin-inner3,.admin-inner1{
+    display: none;
+    
+  }
   }
 </style>
 
@@ -252,12 +258,12 @@
       <h1 class="admin-counselling-head season">Admissions Isn't Luck - It's Strategy</h1>
     </div>
     <div class="admin-counselling2">
-      <div class="admin-inner1 d-none d-md-block"><img src="{% static 'img/coma1.png' %}" alt=""></div>
+      <div class="admin-inner1"><img src="{% static 'img/coma1.png' %}" alt=""></div>
       <div class="admin-inner2">
         <p class="admin-counselling-para">Working with Elite Ivy was the best decision we made for our son's college journey. His insight, strategy, and honesty were unmatched. From selecting the right colleges to crafting essays that truly reflected our son's voice, Salabat was there every step of the way. Thanks to his guidance, our son was accepted into Columbia with scholarships</p>
         <p class="admin-counselling-para">- Parent of Admitted Student, Class of 2024</p>
       </div>
-      <div class="admin-inner3 d-none d-md-block"><img src="{% static 'img/coma2.png' %}" alt=""></div>
+      <div class="admin-inner3"><img class="coma" src="{% static 'img/coma2.png' %}" alt=""></div>
     </div>
   </div>
 </div>
@@ -481,6 +487,9 @@
   .para{
     font-size: 1.5vw;
   }
+  .admin_counselling_head{
+    font-weight: 800;
+  }
 
   @media (max-width:768px) {
     .admin_counselling_head{
@@ -517,9 +526,11 @@
 <style>
   .ofer-head{
     font-size: 2.5vw;
+    font-weight: 600;
   }
   .ofer-sup-head{
     font-size: 1.8vw;
+    font-weight: 600;
   }
   .ofer-para{
     font-size: 1.2vw;
@@ -541,39 +552,39 @@
 
 <div class="p-3 p-md-5">
   <h1 class="ofer-head season green">What We Offer</h1>
-  <p class="ofer-sup-head green">✅ College & University Selection</p>
+  <p class="ofer-sup-head season green">✅ College & University Selection</p>
   <p class="ofer-para">We help identify the right-fit schools based on your academic performance, personal goals, and long-term aspirations.</p>
 
 
-<p class="ofer-sup-head green">✅ Personalized School Recommendations</p>
+<p class="ofer-sup-head season green">✅ Personalized School Recommendations</p>
 <p class="ofer-para">Using data-driven insights and profile evaluation, we propose universities that align with your strengths — academically, socially, and financially.</p>
 
-<p class="ofer-sup-head green">✅ IELTS / TOEFL Preparation</p>
+<p class="ofer-sup-head season green">✅ IELTS / TOEFL Preparation</p>
 <p class="ofer-para">Our in-house language expert, Syeda Urooj, provides targeted coaching to help you excel in English proficiency exams required for U.S. admissions.</p>
 
-<p class="ofer-sup-head green">✅ College Application Essay Support</p>
+<p class="ofer-sup-head season green">✅ College Application Essay Support</p>
 <p class="ofer-para">We work closely with you to brainstorm, draft, edit, and polish standout essays that reflect your voice and story authentically.</p>
 
-<p class="ofer-sup-head green">✅ Application Filing</p>
+<p class="ofer-sup-head season green">✅ Application Filing</p>
 <p class="ofer-para">We ensure all parts of your Common App, UC app, or direct university applications are completed thoroughly and submitted on time.</p>
 
-<p class="ofer-sup-head green">✅ Dashboard for Seamless Communication</p>
+<p class="ofer-sup-head season green">✅ Dashboard for Seamless Communication</p>
 <p class="ofer-para">We create a personalized dashboard for each student to track progress, manage deadlines, and organize every piece of application data in one place.</p>
 
-<p class="ofer-sup-head green">✅ Letters of Recommendation</p>
+<p class="ofer-sup-head season green">✅ Letters of Recommendation</p>
 <p class="ofer-para">Need help drafting or guiding your recommenders? We assist with framing strong letters that align with your application theme.</p>
 
-<p class="ofer-sup-head green">✅ Scholarship Applications</p>
+<p class="ofer-sup-head season green">✅ Scholarship Applications</p>
 <p class="ofer-para">We help identify and apply for merit-based and need-based scholarships, grants, and financial aid opportunities.</p>
 
-<p class="ofer-sup-head green">✅ University Visit Planning</p>
+<p class="ofer-sup-head season green">✅ University Visit Planning</p>
 <p class="ofer-para">If you're planning campus visits, we help arrange meetings, prepare campus tour plans, and suggest key questions to ask admissions officers.</p>
 
-<p class="ofer-sup-head green">✅ Visa Counseling</p>
+<p class="ofer-sup-head season green">✅ Visa Counseling</p>
 <p class="ofer-para">We provide full support for U.S. student visa applications, from document prep to mock interviews.</p>
 Note: Visa issuance is solely at the discretion of the consular officer.
 
-<p class="ofer-sup-head green">✅ Post-Arrival Support in the U.S.</p>
+<p class="ofer-sup-head season green">✅ Post-Arrival Support in the U.S.</p>
 <p class="ofer-para">From airport pickup coordination to housing guidance and orientation advice, we continue supporting our students even after they arrive in the U.S.</p>
 </div>
 
@@ -616,12 +627,15 @@ Note: Visa issuance is solely at the discretion of the consular officer.
   }
 
   .hero-head {
-    font-weight: 600 !important;
-    font-size: 3vw !important;
+    font-weight: 500 !important;
+    font-size: 5vw !important;
   }
   .hero-para {
     font-size: 1.5vw;
   }
+
+ 
+
   @media (max-width: 900px) {
     .hero-para {
       font-size: small;
@@ -645,7 +659,7 @@ Note: Visa issuance is solely at the discretion of the consular officer.
     <p class="hero-para text-white">
       Don't let college rejection be your student's fate. Early planning is the key to a successful application. We can map out a schedule...
     </p>
-    <h1 class="season hero-head text-white">Before it's too Late</h1>
+    <h1 class="season hero-head reject text-white">Before it's too Late</h1>
   </div>
 </header>
 
@@ -658,6 +672,9 @@ Note: Visa issuance is solely at the discretion of the consular officer.
 <style>
   .para{
     font-size: 1.5vw;
+  }
+  .graduate-para{
+    font-size: 1.4vw !important;
   }
 @media (max-width:768px) {
   .admin_counselling_head{
@@ -739,7 +756,7 @@ Note: Visa issuance is solely at the discretion of the consular officer.
 <p class="ofer-sup-head green">✅ Post-Arrival Support in the U.S.</p>
 <p class="ofer-para">From airport pickup coordination to housing guidance and orientation advice, we continue supporting our students even after they arrive in the U.S.</p>
 
-
+</div>
 
 
 
@@ -774,9 +791,9 @@ Note: Visa issuance is solely at the discretion of the consular officer.
   }
 </style>
 
-<div class="container-fluid lineargradiant py-5 mt-5">
+<div class="containerr-fluid lineargradiant py-5 mt-5">
   <div class="row">
-    <div class="col-12 pr-md-5 pl-md-5 pr-3 pl-3">
+    <div class="col-12 pr-md-5 pl-md-5 pr-3 pr-md-5 pl-3 pl-md-5">
       <h1 class="text-white season head admition-counsling-head">
         Fill out a short form for a free demo class or consultation
       </h1>
@@ -786,7 +803,7 @@ Note: Visa issuance is solely at the discretion of the consular officer.
     </div>
   </div>
 </div>
-</div>
+
 
 
 
@@ -797,6 +814,9 @@ Note: Visa issuance is solely at the discretion of the consular officer.
   }
   .list-type-none{
     list-style-type: none;;
+  }
+  .ProBono-para{
+    font-size: 1.3vw;
   }
 
   @media (max-width:768px) {
@@ -811,7 +831,7 @@ Note: Visa issuance is solely at the discretion of the consular officer.
 
 
 
-<div class="container-fluid bg-white py-md-5 py-0">
+<div class="container-fluid bg-white py-md-0 py-0">
   <div class="row  p-3 p-md-5 ">
     <div class="col-8">
       <div class="col-12 m-0 p-0 animated-heading profile-part">
@@ -845,7 +865,9 @@ Note: Visa issuance is solely at the discretion of the consular officer.
   .counsell-head{
     font-size: 2vw;
   }
-
+  .bold-700{
+    font-weight: 600;
+  }
   @media (max-width:768px) {
     .counsell-head{
       font-size: 4vw;
@@ -863,7 +885,7 @@ Note: Visa issuance is solely at the discretion of the consular officer.
   <div class="row p-3 p-md-5">
     <div class="col-12 col-md-8">
       <div class="col-12 m-0 p-0  profile-part">
-          <h1 class="green  counsell-head season">
+          <h1 class="green bold-700 counsell-head season">
             What We Offer (Fully Free of Charge)
           </h1>   
       </div>
@@ -900,7 +922,7 @@ Note: Visa issuance is solely at the discretion of the consular officer.
   <div class="row p-3 p-md-5">
     <div class="col-12 col-md-8">
       <div class="col-12 m-0 p-0  profile-part">
-          <h1 class="green how-apy season counsell-head">
+          <h1 class="green bold-700 how-apy season counsell-head">
             How to Apply
           </h1>   
       </div>
@@ -943,9 +965,19 @@ Note: Visa issuance is solely at the discretion of the consular officer.
   .text-underline{
     text-decoration: underline;
   }
+  .interested{
+     border-radius: 50px;
+     margin: 50px;
+  }
+  @media (max-width:800px) {
+    .interested{
+     border-radius: 0px;
+     margin: 0px;
+  }
+  }
 </style>
 
-<div class="container-fluid lineargradianttt py-5 mt-5">
+<div class=" interested lineargradianttt py-3 mt-5">
   <div class="row">
     <div class="col-12 pr-5 pl-5">
       <h1 class="orange season head admition-counsling-head">
